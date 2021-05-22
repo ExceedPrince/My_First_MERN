@@ -81,7 +81,7 @@ const ProfileSchema = new mongoose.Schema({
 				type: Boolean,
 				default: false
 			},
-			decription: {
+			description: {
 				type: String
 			}
 		}
