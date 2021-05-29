@@ -5,6 +5,7 @@ import { getCurrentProfile } from '../../actions/profile';
 
 import Spinner from '../layout/Spinner';
 import { Link } from 'react-router-dom';
+import DashboardActions from './DasboardActions';
 
 
 const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
@@ -19,7 +20,9 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
 				<i className="fas fa-user"></i> Welcome {user && user.name}
 			</p>
 			{profile !== null ?
-				(<>has</>) :
+				(<>
+					<DashboardActions />
+				</>) :
 				(<>
 					<p>You have not yet setup a prfile, please add some info</p>
 					<Link to='/create-profile' className='btn btn-primary my-1'>Create Profile</Link>
@@ -38,6 +41,4 @@ const mapStateToProps = (state) => ({
 	profile: state.profile
 });
 
-export default connect(mapStateToProps, { getCurrentProfile })(
-	Dashboard
-);
+export default connect(mapStateToProps, { getCurrentProfile })(Dashboard);
