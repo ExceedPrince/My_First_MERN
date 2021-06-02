@@ -1,0 +1,6 @@
+{
+	"mongoURI": "mongodb+srv://ExceedPrince:ExceedPrince@devconnector.hb3hv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+	"jwtSecret": "mysecrettoken",
+	"githubClientId": "e342e94e410c3d26f0d1",
+	"githubSecret": "92abb728759e8e47d7cdc862e4b660b3ee08d4ef"
+}
